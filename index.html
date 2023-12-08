@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Shop</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <Style>
+        /* html {
+            background-color: black;
+        }
+        #container {
+            background-color: black;
+        } */
+
+        #navBar {
+          position: static;
+        }
+        
+        #buy {
+            margin-top: 20px;
+        }
+
+        #image img {
+            height: 300px;
+            width: 300px;
+        }
+
+        #moreInfo {
+            font-size: small;
+            margin-top: 20px;
+        }
+
+        #reviews {
+            margin-top: 30px;
+            
+        }
+
+        #reviews img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+        }
+
+        li {
+          margin: 20px;
+          width: 100%;
+        }
+
+        li button {
+          width: 70%;
+          height: 100px;
+        }
+
+        li img {
+          width: 100px;
+          height: 100px;
+          margin-right: 20px;
+        }
+
+        #specArea {
+          margin-top: 40px;
+          
+        }
+
+        #moreInfo p {
+          font-size: 20px;
+          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        #reviewInput {
+          width: 400px;
+        }
+    </Style>
+</head>
+<body>
+  <header>
+    <div id="container">
+        <!-- this is where the code to the nav bar goes -->
+        <div id="navBar">
+            <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">The Shop</a>
+                  
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarColor02">
+                    <ul class="navbar-nav me-auto">
+                      <li class="nav-item">
+                        <a class="nav-link active" href="#" id="home">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#" id="features">Features</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#" id="about">About</a>
+                      </li>
+                    </ul>
+                  </div>
+                    <form class="d-flex">
+                      <input class="form-control " type="search" placeholder="Search Games" id="searchBar">
+                      <!-- <button class="btn btn-secondary my-2 my-sm-0" type="submit" id="search">Search</button> -->
+                    </form>
+                  
+                </div>
+              </nav>
+        </div>
+  </header>
+        <!-- end of nav bar code -->
+
+        <!-- This is the product info pic and stuff like that -->
+    <div id="content" class="container">
+        <div id="productArea">
+          <h3>Welcome to THE SHOP your number like 50 destination for games. We Have a very Narrow sellection of games.</h3>
+          <br>
+          <h3>But What is better about our site is that we offer cheap games</h3>
+          <br>
+          <h3>To check our ever growing list of games. Simply use the search bar above.</h3>
+        
+            <div id="reviews" >
+              <h3>Reviews</h3>
+                  <div class="alert alert-dismissible alert-secondary"><img src='images/Screenshot (4).png'><br><p>Wow such a great site love it.</p></div>
+                  <div class="alert alert-dismissible alert-secondary">
+                    <img src='images/Screenshot (3).png'><br><p>This site is one of the best sites i have ever used. The blablablablablablabla was so good. It a cinematic Experience.</p>
+                  </div>
+                  <div class="alert alert-dismissible alert-secondary">
+                    <img src='images/Screenshot (3).png'><br><p> Great site. Man this stuff is just fire you feel me how many sites can you use "", Stuff like this is whhy i can't play any old game ma dude you feel me dudes and dudette.</p>
+                  </div>
+                  <div id="writeAReview">
+                    <h3>Write a review of the site:</h3>
+                    <input type="text" name="review" id="reviewInput"><input type="submit" id="submit">
+                  </div>
+            </div>
+        </div>
+    </div>
+        
+        <!-- End of the stuff -->
+
+  <script src="gameInfo.json"></script>
+  <script src="fetching.js"></script>
+  <script src="meat.js"></script>
+</body>
+</html>

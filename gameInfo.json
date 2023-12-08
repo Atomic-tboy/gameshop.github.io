@@ -1,0 +1,102 @@
+[
+    {
+        "name": "Spider-Man: Miles Morales",
+        "descirption": "Experience the rise of Miles Morales as the new hero masters incredible, explosive new powers to become his own Spider-Man.",
+        "price": 4000,
+        "imageLink": "images/miles.jpg",
+        "specsMin": {
+            "os": "Windows",
+            "ram": "8GB",
+            "storage": 35,
+            "graphics": "Nvidia GeFirce 1650 or it's Equlivelents",
+            "bits": 64
+        },
+        "specsRec": {
+            "os": "Windows",
+            "ram": "16GB",
+            "storage": 35,
+            "graphics": "Nvidia GeFirce 3060 or it's Equlivelents",
+            "bits": 64
+        } 
+    },
+    {
+        "name": "Lies of P",
+        "descirption": "Lies of P is a thrilling soulslike that takes the story of Pinocchio, turns it on its head, and sets it against the darkly elegant backdrop of the Belle Epoque era.",
+        "price": 10000,
+        "imageLink": "images/lies.jpg",
+        "specsMin": {
+            "os": "Windows",
+            "ram": "8GB",
+            "storage": 50,
+            "graphics": "Nvidia GeFirce 1650 or it's Equlivelents",
+            "bits": 64
+        },
+        "specsRec": {
+            "os": "Windows",
+            "ram": "16GB",
+            "storage": 50,
+            "graphics": "Nvidia GeFirce 3060 or it's Equlivelents",
+            "bits": 64
+        }    
+    },
+    {
+        "name": "The Crew MotorSport",
+        "descirption": "The latest chapter of the open world action-driving series transforms the beautiful Hawaiian island of O'ahu into a premiere racing destination.",
+        "price": 10000,
+        "imageLink": "images/theCrew.jpg",
+        "specsMin": {
+            "os": "Windows",
+            "ram": "8GB",
+            "storage": 100,
+            "graphics": "Nvidia GeFirce 1650 or it's Equlivelents",
+            "bits": 64
+        },
+        "specsRec": {
+            "os": "Windows",
+            "ram": "16GB",
+            "storage": 100,
+            "graphics": "Nvidia GeFirce 3060 or it's Equlivelents",
+            "bits": 64
+        }
+    },
+    {
+        "name": "Sifu",
+        "descirption": "Sifu is a stylish yet gritty beat-em-up, featuring visceral hand-to-hand combat in a contemporary urban setting. From Sloclap, creators of acclaimed PS4 fighting game Absolver, Sifu follows a young kung fu student on a path of revenge, hunting for the murderers of his family.",
+        "price": 3000,
+        "imageLink": "images/sifu.jpg",
+        "specsMin": {
+            "os": "Windows",
+            "ram": "8GB",
+            "storage": 15,
+            "graphics": "Nvidia GeFirce 1650 or it's Equlivelents",
+            "bits": 64
+        },
+        "specsRec": {
+            "os": "Windows",
+            "ram": "16GB",
+            "storage": 20,
+            "graphics": "Nvidia GeFirce 3060 or it's Equlivelents",
+            "bits": 64
+        }
+    },
+    {
+        "name": "Tears Of The Kingdom",
+        "descirption": "The long awaited sequal to breath of the wild",
+        "price": 6000,
+        "imageLink": "images/tears.jpg",
+        "specsMin": {
+            "os": "Windows",
+            "ram": "8GB",
+            "storage": 17,
+            "graphics": "Nvidia GeFirce 1650 or it's Equlivelents",
+            "bits": 64
+        },
+        "specsRec": {
+            "os": "Windows",
+            "ram": "16GB",
+            "storage": 20,
+            "graphics": "Nvidia GeFirce 1650 or it's Equlivelents",
+            "bits": 64
+        }
+    }
+]
