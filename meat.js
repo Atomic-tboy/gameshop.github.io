@@ -9,18 +9,31 @@ const domElements = {
     about: document.querySelector('#about'),
     reviewInput: document.querySelector('#reviewInput'),
     submit: document.querySelector('#submit'),
-    writeAreviewDiv: document.querySelector('#writeAReview')
-
+    writeAreviewDiv: document.querySelector('#writeAReview'),
+    toggleNavbar: document.getElementById('navbarColor01'),
+    toggleNavBtn: document.getElementById('collapse')
 };
 
 //calling getGamesArray Function from the fetcher class (question: should it be static ?[Answer i made it static and it worked])
 // const main = new Fetcher;
 
-domElements.searchBar.addEventListener('keyup', Fetcher.getGamesArray);
+domElements.searchBar.addEventListener('keyup', theRealNigga);
 domElements.home.addEventListener('click', goHome);
 domElements.features.addEventListener('click', features);
 domElements.about.addEventListener('click', aboutUs);
-domElements.submit.addEventListener('click', writeAreview)
+domElements.submit.addEventListener('click', writeAreview);
+domElements.toggleNavBtn.addEventListener('click', navStuff)
+
+function theRealNigga () {
+    Fetcher.getGamesArray()
+    .then(data => {
+        search(data, domElements.searchBar.value);
+        change(data);
+    })
+    .catch(() => {
+        console.log('There Was an error')
+    })
+}
 
 function writeAreview () {
     let div = create('div', 'alert alert-dismissible alert-secondary');
@@ -201,7 +214,11 @@ function aboutUs () {
 }
 
 
+function navStuff (event) {
+    domElements.toggleNavbar.classList.toggle('show');
 
+    event.preventDefault();
+}
 
 
 
