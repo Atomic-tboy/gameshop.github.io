@@ -4,7 +4,7 @@ class Fetcher {
         .then(res => res.json())
         .then(data => {
             search(data, domElements.searchBar.value);
-            change(data.StandingsTable);
+            change(data);
         });
     };
 }
