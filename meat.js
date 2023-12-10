@@ -154,7 +154,7 @@ function change (arr) {
             });
         });
     })
-};
+}
 
 function goHome () {
     domElements.productArea.innerHTML = `
@@ -181,7 +181,7 @@ function goHome () {
     domElements.features.classList.remove('active');
 
     Event.preventDefault();
-};
+}
 
 function features () {
     domElements.productArea.innerHTML = `
@@ -198,7 +198,7 @@ function features () {
     
 
     Event.preventDefault();
-};
+}
 
 function aboutUs () {
     domElements.productArea.innerHTML = `
@@ -212,21 +212,20 @@ function aboutUs () {
     
 
     Event.preventDefault();
-};
+}
 
 
 function navStuff (event) {
     domElements.toggleNavbar.classList.toggle('show');
 
     event.preventDefault();
-};
+}
 
 function buyStuff (event) {
     if (event.target.id === 'buy') {
         alert('The Count Number is 8110625968, Tobi Clarence Davies. Send the money their Along with your name, address and transport Money. Or Contact 08110625968 for delivery options.');
     }
- };
-
+ }
 
 
 
