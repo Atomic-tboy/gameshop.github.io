@@ -1,10 +1,9 @@
 class Fetcher {
-    static getGamesArray () {
-        fetch("gameInfo.json")
-        .then(res => res.json())
-        .then(data => {
-            search(data, domElements.searchBar.value);
-            change(data);
-        });
+    static async getGamesArray () {
+        const response = await fetch("gameInfo.json");
+
+        const data = await response.json();
+
+        return data;
     };
-}
+};
