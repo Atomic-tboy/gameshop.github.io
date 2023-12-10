@@ -33,7 +33,7 @@ function writeAreview () {
 }
 
 function search (arr, input) {
-    let newInput = new RegExp(input);
+    let newInput = new RegExp(input.toLowerCase());
 
     //creating an unordered list
 
