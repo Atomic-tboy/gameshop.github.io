@@ -225,6 +225,8 @@ function buyStuff (event) {
     if (event.target.id === 'buy') {
         alert('The Count Number is 8110625968, Tobi Clarence Davies. Send the money their Along with your name, address and transport Money. Or Contact 08110625968 for delivery options.');
     }
+
+    event.preventDefault();
  }
 
 
