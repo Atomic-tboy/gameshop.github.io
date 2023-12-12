@@ -21,9 +21,10 @@ domElements.searchBar.addEventListener('keyup', theRealNigga);
 domElements.home.addEventListener('click', goHome);
 domElements.features.addEventListener('click', features);
 domElements.about.addEventListener('click', aboutUs);
-domElements.submit.addEventListener('click', writeAreview);
+// domElements.submit.addEventListener('click', writeAreview);
 domElements.toggleNavBtn.addEventListener('click', navStuff);
-domElements.productArea.addEventListener('click', buyStuff)
+domElements.productArea.addEventListener('click', buyStuff),
+domElements.writeAreviewDiv.addEventListener('click', writeAreview)
 
 function theRealNigga () {
     Fetcher.getGamesArray()
@@ -36,14 +37,17 @@ function theRealNigga () {
     })
 }
 
-function writeAreview () {
-    let div = create('div', 'alert alert-dismissible alert-secondary');
-    div.innerHTML = `<img src='images/Screenshot (3).png'><br><p>${domElements.reviewInput.value}</p>`;
-    
-    // domElements.reviews.append(div);
-    domElements.writeAreviewDiv.insertAdjacentElement('beforebegin', div);
+function writeAreview (event) {
+    if (event.target.id === 'submit') {
 
-    domElements.reviewInput.value = ''
+        let div = create('div', 'alert alert-dismissible alert-dark');
+        div.innerHTML = `<img src='images/Screenshot (3).png'><br><p>${domElements.reviewInput.value}</p>`;
+        
+        // domElements.reviews.append(div);
+        domElements.writeAreviewDiv.insertAdjacentElement('beforebegin', div);
+
+        domElements.reviewInput.value = ''
+    }
 }
 
 function search (arr, input) {
@@ -70,7 +74,7 @@ function search (arr, input) {
             //Creating li
             const li = create('li', null, 'listItem');
             // li.innerHTML = `<img src=${game.imageLink}><button id="change" >${game.name}</button>`;
-            li.innerHTML = `<img src=${game.imageLink}><button id="change" class='btn alert alert-dismissible alert-secondary'>${game.name}</button>`
+            li.innerHTML = `<img src=${game.imageLink}><button id="change" class='btn alert alert-dark'>${game.name}</button>`
 
             //adding li to the ul
             ul.append(li);
@@ -156,7 +160,7 @@ function change (arr) {
     })
 }
 
-function goHome () {
+function goHome (event) {
     domElements.productArea.innerHTML = `
     <h3>Welcome to THE SHOP your number like 50 destination for games. We Have a very Narrow sellection of games.</h3>
     <br>
@@ -166,11 +170,11 @@ function goHome () {
   
       <div id="reviews" class="Container">
         <h3>Reviews:</h3>
-            <div class="alert alert-dismissible alert-secondary"><img src='images/Screenshot (4).png'><br><p>Wow such a great site love it.</p></div>
-            <div class="alert alert-dismissible alert-secondary">
+            <div class="alert  alert-dark"><img src='images/Screenshot (4).png'><br><p>Wow such a great site love it.</p></div>
+            <div class="alert  alert-dark">
               <img src='images/Screenshot (3).png'><br><p>This site is one of the best sites i have ever used. The blablablablablablabla was so good. It a cinematic Experience.</p>
             </div>
-            <div class="alert alert-dismissible alert-secondary">
+            <div class="alert alert-dark">
               <img src='images/Screenshot (3).png'><br><p> Great site. Man this stuff is just fire you feel me how many sites can you use "", Stuff like this is whhy i can't play any old game ma dude you feel me dudes and dudette.</p>
             </div>
       </div>
@@ -180,10 +184,10 @@ function goHome () {
     domElements.about.classList.remove('active');
     domElements.features.classList.remove('active');
 
-    Event.preventDefault();
+    event.preventDefault();
 }
 
-function features () {
+function features (event) {
     domElements.productArea.innerHTML = `
     <h3>The main feature, we will discuss about is the low low low prices. I mean at these price we'll soon be out of business for REAL.</h3>
     <br>
@@ -197,10 +201,10 @@ function features () {
     domElements.about.classList.remove('active');
     
 
-    Event.preventDefault();
+    event.preventDefault();
 }
 
-function aboutUs () {
+function aboutUs (event) {
     domElements.productArea.innerHTML = `
         <h3>I don't understand why you clicked this. You already know everything so just why are you here.</h3>
     `;
@@ -211,7 +215,7 @@ function aboutUs () {
 
     
 
-    Event.preventDefault();
+    event.preventDefault();
 }
 
 
@@ -225,8 +229,6 @@ function buyStuff (event) {
     if (event.target.id === 'buy') {
         alert('The Count Number is 8110625968, Tobi Clarence Davies. Send the money their Along with your name, address and transport Money. Or Contact 08110625968 for delivery options.');
     }
-
-    event.preventDefault();
  }
 
 
